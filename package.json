@@ -1,0 +1,30 @@
+{
+  "name": "vuex-action-names",
+  "version": "1.0.0",
+  "description": "Action names constructor for vuex actions",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/webpack-dev-server --inline",
+    "test": "./node_modules/.bin/jest && ./node_modules/.bin/tslint ./src/**/.ts"
+  },
+  "keywords": [
+    "vuex",
+    "actions",
+    "naming"
+  ],
+  "author": "healqq",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^22.2.2",
+    "html-webpack-plugin": "^3.1.0",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.2",
+    "ts-loader": "^4.1.0",
+    "tslint": "^5.9.1",
+    "typescript": "^2.8.1",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1"
+  }
+}
