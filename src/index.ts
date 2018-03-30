@@ -1,3 +1,4 @@
 import Factory from "./ActionNamesFactory";
+import mapActionsHelper from "./MapActionsHelper";
 
-export default Factory;
+export { Factory, mapActionsHelper };

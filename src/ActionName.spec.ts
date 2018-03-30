@@ -13,18 +13,12 @@ describe("ActionName", () => {
     it("should be an action name without prefix", () => {
       expect(actionName instanceof ActionName).toBe(true);
       expect(actionName.toString()).toBe(name);
-      expect(actionName.name).toEqual(name);
+      expect(actionName.full).toEqual(name);
     });
 
     it("should behave correctly inside object key", () => {
       expect({
         [actionName as any]: 1,
-      }).toEqual({
-        [name]: 1,
-      });
-
-      expect({
-        [actionName.name]: 1,
       }).toEqual({
         [name]: 1,
       });
@@ -37,19 +31,13 @@ describe("ActionName", () => {
     });
     it("should be an action name with prefix", () => {
       expect(actionName instanceof ActionName).toBe(true);
-      expect(actionName.toString()).toBe(prefixedName);
-      expect(actionName.name).toEqual(name);
+      expect(actionName.toString()).toBe(name);
+      expect(actionName.full).toEqual(prefixedName);
     });
 
     it("should behave correctly inside object key", () => {
       expect({
         [actionName as any]: 1,
-      }).toEqual({
-        [prefixedName]: 1,
-      });
-
-      expect({
-        [actionName.name]: 1,
       }).toEqual({
         [name]: 1,
       });

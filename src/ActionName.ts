@@ -1,13 +1,14 @@
 class ActionName {
-  public name: string;
-  private namespacedName: string;
+  public full: string;
+  private name: string;
+
   constructor(prefix: string|null = null, name: string) {
     this.name = name;
-    this.namespacedName = prefix === null ? name : `${prefix}/${name}`;
+    this.full = prefix === null ? name : `${prefix}/${name}`;
 
   }
   public toString(): string {
-    return this.namespacedName;
+    return this.name;
   }
 }
 
