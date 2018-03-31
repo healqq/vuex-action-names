@@ -38,9 +38,9 @@ store.dispatch('bar/getFoo')
 ```
 
 A lot of strings involved. We can use 
-```
+`
 createNamespaceHelpers
-```
+`
 from vuex, but it becomes verbose when our app grows.
 
 With this extension we can now do this:
@@ -73,11 +73,7 @@ const component = {
   // irrelevant config skipped
   methods: {
     ...mapActionsHelper([
-      // short notation if you want to map to
-      // unprefixed action name
       SOME_ACTION, 
-      // object, if you want custom mapping
-      { foo: SOME_ACTION }
     ]),
   },
 };
