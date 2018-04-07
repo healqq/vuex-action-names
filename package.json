@@ -2,7 +2,7 @@
   "name": "vuex-action-names",
   "version": "1.0.0",
   "description": "Action names constructor for vuex actions",
-  "main": "index.js",
+  "main": "./dist/vuex-action-names.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --inline",
     "build": "./node_modules/.bin/webpack --config ./webpack.config.build.js",

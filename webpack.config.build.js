@@ -5,7 +5,7 @@ module.exports = {
   entry: "./src/index.ts",
   output: {
       library: "vuexActionNames",
-      libraryTarget: "var",
+      libraryTarget: "umd",
       filename: "vuex-action-names.js"
   },
   resolve: {
