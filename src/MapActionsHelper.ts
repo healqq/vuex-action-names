@@ -1,11 +1,11 @@
 import { mapActions } from "vuex";
 import ActionName from "./ActionName";
 
-interface IActionNameMapping {
+export interface IActionNameMapping {
   [key: string]: ActionName;
 }
-type ActionNameDefinition = ActionName | IActionNameMapping;
-type ActionNamesCollection = ActionNameDefinition[];
+export type ActionNameDefinition = ActionName | IActionNameMapping;
+export type ActionNamesCollection = ActionNameDefinition[];
 
 function mapActionsHelper(actions: ActionNamesCollection | ActionName | IActionNameMapping) {
   const actionsArray = Array.isArray(actions) ? actions : [actions];
