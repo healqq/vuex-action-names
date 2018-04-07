@@ -1,11 +1,12 @@
 {
   "name": "vuex-action-names",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Action names constructor for vuex actions",
   "main": "./dist/vuex-action-names.js",
+  "types": "./dist/types/index.d.ts",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --inline",
-    "build": "./node_modules/.bin/webpack --config ./webpack.config.build.js",
+    "build": "rm -rf ./build/* && rm -rf ./dist/* && ./node_modules/.bin/tsc --declaration  --outDir ./build && mkdir ./dist/types && find ./build -name \"*.d.ts\" -exec cp {} ./dist/types/ \\; && ./node_modules/.bin/webpack --config ./webpack.config.build.js",
     "test": "./node_modules/.bin/jest && ./node_modules/.bin/tslint ./src/**/.ts"
   },
   "keywords": [
@@ -21,6 +22,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^22.2.2",
+    "@types/vue": "^2.0.0",
     "html-webpack-plugin": "^3.1.0",
     "jest": "^22.4.3",
     "ts-jest": "^22.4.2",
