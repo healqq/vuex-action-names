@@ -1,6 +1,6 @@
 {
   "name": "vuex-action-names",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Action names constructor for vuex actions",
   "main": "./dist/vuex-action-names.js",
   "scripts": {
