@@ -1,6 +1,7 @@
 # vuex-action-names
 Wrapper for vuex action names aimed to eliminate usage of "magic strings" in the code.
 
+Demo repository: [https://github.com/healqq/vuex-action-names-example](https://github.com/healqq/vuex-action-names-example)
 ## Usage
 Let's have a simple store:
 ```
