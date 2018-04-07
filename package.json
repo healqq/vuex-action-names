@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --inline",
+    "build": "./node_modules/.bin/webpack --config ./webpack.config.build.js",
     "test": "./node_modules/.bin/jest && ./node_modules/.bin/tslint ./src/**/.ts"
   },
   "keywords": [
@@ -12,6 +13,10 @@
     "actions",
     "naming"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/healqq/vuex-action-names.git"
+  },
   "author": "healqq",
   "license": "MIT",
   "devDependencies": {
