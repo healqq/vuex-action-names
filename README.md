@@ -7,12 +7,18 @@ Let's have a simple store:
 ```
 // store.js
 import { SOME_ACTION } from './actions';
-const store = {
+const barStore = {
   namespaced: true,
   actions: {
     [SOME_ACTION]: () => {},
   }
 }
+
+const store = new vuex.Store(
+  modules: {
+    bar: barStore,
+  },
+});
 ```
 with an action:
 ```
