@@ -7,12 +7,18 @@ Let's have a simple store:
 ```
 // store.js
 import { SOME_ACTION } from './actions';
-const store = {
+const barStore = {
   namespaced: true,
   actions: {
     [SOME_ACTION]: () => {},
   }
 }
+
+const store = new vuex.Store(
+  modules: {
+    bar: barStore,
+  },
+});
 ```
 with an action:
 ```
@@ -45,7 +51,8 @@ createNamespaceHelpers
 from vuex, but it becomes verbose when our app grows.
 
 With this extension we can now do this:
-Create ActionName object and pass original action string to constructor:
+
+Create *ActionName* object and pass original action string to constructor:
 ```
 import Factory from 'vue-action-names';
 const factory = new Factory('bar');
@@ -73,9 +80,7 @@ import { SOME_ACTION } from './actions';
 const component = {
   // irrelevant config skipped
   methods: {
-    ...mapActionsHelper([
-      SOME_ACTION, 
-    ]),
+    ...mapActionsHelper(SOME_ACTION),
   },
 };
 ```
