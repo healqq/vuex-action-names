@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/healqq/vuex-action-names.svg?branch=master)](https://travis-ci.org/healqq/vuex-action-names)
 # vuex-action-names
 Wrapper for vuex action names aimed to eliminate usage of "magic strings" in the code.
 
