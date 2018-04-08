@@ -7,7 +7,7 @@
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --inline",
     "build": "rm -rf ./build/* && rm -rf ./dist/* && ./node_modules/.bin/tsc --declaration  --outDir ./build && mkdir ./dist/types && find ./build -name \"*.d.ts\" -exec cp {} ./dist/types/ \\; && ./node_modules/.bin/webpack --config ./webpack.config.build.js",
-    "test": "./node_modules/.bin/jest && ./node_modules/.bin/tslint ./src/**/.ts"
+    "test": "./node_modules/.bin/jest && ./node_modules/.bin/tslint -p tsconfig.json -c tslint.json"
   },
   "keywords": [
     "vuex",
